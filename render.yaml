@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: damodharan-discord-bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bash start.sh"
+    autoDeploy: true
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
